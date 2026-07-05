@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Theme on Symbiote Theme Demo</title>
+		<link>http://localhost:1313/tags/theme/</link>
+		<description>Recent content in Theme on Symbiote Theme Demo</description>
+		<generator>Hugo</generator>
+		<language>en-US</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 02 Jul 2026 10:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>We are Venom</title>
+				<link>http://localhost:1313/blog/first-post/</link>
+				<pubDate>Thu, 02 Jul 2026 10:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/first-post/</guid>
+				<description>&lt;p&gt;This is a demonstration post for the &lt;code&gt;hugo-theme-symbiote&lt;/code&gt; package.&lt;/p&gt;&#xA;&lt;p&gt;Try clicking the theme toggle in the footer to cycle through the official symbiote color schemes: &lt;code&gt;venom&lt;/code&gt;, &lt;code&gt;carnage&lt;/code&gt;, &lt;code&gt;black-suit&lt;/code&gt;, and &lt;code&gt;anti-venom&lt;/code&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

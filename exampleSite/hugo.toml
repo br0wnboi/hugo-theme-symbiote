@@ -14,8 +14,8 @@ locale = "en-US"
   author = "John Doe"
   
   # Theme Configuration
-  promptUser = "hacker"
-  promptHost = "mainframe"
+  promptUser = "peter.p"
+  promptHost = "oscorp"
   showCursor = true
   themes = ["venom", "carnage", "black-suit", "anti-venom", "charcoal", "amoled", "gruvbox", "dracula", "nord", "catppuccin"]
 

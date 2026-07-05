@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spider-Man: The Science Behind the Suit — Symbiote Theme Demo</title>
+<meta name="description" content="A demo of the Symbiote theme.">
+<meta name="author" content="John Doe">
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.min.344e9848dc51afd8f7a90cf25170e28c87cb3b2dc1565e5f23b623ae6aaeb5ac.css" integrity="sha256-NE6YSNxRr9j3qQzyUXDijIfLOy3BVl5fI7Yjrmqutaw=">
+
+<script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme && savedTheme !== 'charcoal') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+</script>
+</head>
+<body>
+
+<div class="container"><header>
+    
+    
+        
+            
+        
+    
+
+    <div class="header-content">
+        <div class="site-prompt">
+            <span class="user">hacker</span><span class="path">@mainframe</span> ~&nbsp;<span class="typed-text" data-text="cat /blog/spider-man.md"></span>
+            <span class="cursor"></span>
+        </div>
+        <nav>
+            <ul>
+                
+        
+        <li><a href="http://localhost:1313/">home</a></li>
+        
+        
+        <li><a href="http://localhost:1313/blog/">blog</a></li>
+        
+            </ul>
+        </nav>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[charcoal]</button>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textElement = document.querySelector('.typed-text');
+        const textToType = textElement.getAttribute('data-text');
+        if (!textToType) return;
+        let index = 0;
+        function type() {
+            if (index < textToType.length) {
+                textElement.textContent += textToType.charAt(index);
+                index++;
+                setTimeout(type, 50 + Math.random() * 50);
+            }
+        }
+        setTimeout(type, 250);
+    });
+</script>
+<main>
+<article class="post-content">
+    <header>
+        <h1>Spider-Man: The Science Behind the Suit</h1>
+        
+        <div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-date">July 1, 2026</span>
+                <span class="reading-time">· 3 min read</span>
+            </div>
+            
+            <div class="post-tags">
+                <a href="/tags/marvel/" class="post-tag">#Marvel</a><a href="/tags/spider-man/" class="post-tag">#Spider-Man</a><a href="/tags/science/" class="post-tag">#Science</a><a href="/tags/symbiote/" class="post-tag">#Symbiote</a>
+            </div>
+            
+        </div>
+        
+    </header>
+
+    
+    <div class="toc">
+        <details open>
+            <summary>Table of Contents</summary>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-web-shooters">The Web-Shooters</a></li>
+    <li><a href="#the-spider-sense">The Spider-Sense</a></li>
+    <li><a href="#the-black-suit">The Black Suit</a></li>
+  </ul>
+</nav>
+        </details>
+    </div>
+    
+
+    <div class="post-body">
+        <p>Peter Parker was bitten by a radioactive spider. Most people hear that origin story and move on, accepting it as comic book magic. But the engineering beneath Spider-Man — the web-shooters, the suit, the reflexes — is more grounded in real science than you might think.</p>
+<h2 id="the-web-shooters">The Web-Shooters</h2>
+<p>Parker didn&rsquo;t gain organic web-spinning from the bite. He <em>built</em> his web-shooters himself, in his bedroom, as a teenager. The web fluid he synthesised is a shear-thinning polymer: solid under pressure inside the cartridge, liquid when ejected at high velocity, then rapidly hardening on contact with air.</p>
+<p>Real-world materials scientists have been chasing exactly this property. Synthetic spider silk proteins produced by companies like Bolt Threads can achieve tensile strengths exceeding steel by weight. Parker&rsquo;s achievement isn&rsquo;t magic — it&rsquo;s <strong>advanced polymer chemistry</strong>, and the real world is catching up.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Rough model of web tensile force at swing apex</span>
+</span></span><span style="display:flex;"><span>mass_kg <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>          <span style="color:#75715e"># Peter + suit</span>
+</span></span><span style="display:flex;"><span>swing_radius_m <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>   <span style="color:#75715e"># web length</span>
+</span></span><span style="display:flex;"><span>velocity_ms <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>      <span style="color:#75715e"># ~43 km/h at apex</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Centripetal force + gravity component</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span>centripetal <span style="color:#f92672">=</span> (mass_kg <span style="color:#f92672">*</span> velocity_ms<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>) <span style="color:#f92672">/</span> swing_radius_m
+</span></span><span style="display:flex;"><span>gravity <span style="color:#f92672">=</span> mass_kg <span style="color:#f92672">*</span> <span style="color:#ae81ff">9.81</span>
+</span></span><span style="display:flex;"><span>total_force_N <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt(centripetal<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> gravity<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Web tension at apex: </span><span style="color:#e6db74">{</span>total_force_N<span style="color:#e6db74">:</span><span style="color:#e6db74">.0f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> N (</span><span style="color:#e6db74">{</span>total_force_N<span style="color:#f92672">/</span><span style="color:#ae81ff">1000</span><span style="color:#e6db74">:</span><span style="color:#e6db74">.2f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> kN)&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Web tension at apex: 1026 N (1.03 kN)</span>
+</span></span></code></pre></div><p>A single strand of dragline spider silk 1mm in diameter can support around 1.75 kN. Parker&rsquo;s web-shooter nozzle is considerably thicker. The physics holds.</p>
+<h2 id="the-spider-sense">The Spider-Sense</h2>
+<p>The radioactive bite gave Parker a precognitive danger sense — a &ldquo;Spider-Sense&rdquo; that fires slightly before conscious awareness registers a threat. Neuroscience has a name for the underlying mechanism: <strong>predictive coding</strong>.</p>
+<p>Your brain is constantly generating predictions about what will happen next. When sensory input violates those predictions, a fast subcortical pathway (via the superior colliculus and amygdala) can trigger a motor response before the signal reaches the prefrontal cortex. It&rsquo;s why you flinch before you know you&rsquo;ve seen something move.</p>
+<p>Parker&rsquo;s bite seemingly amplified this pathway to an almost superhuman degree — not magic, just an extreme version of a system every human already has.</p>
+<h2 id="the-black-suit">The Black Suit</h2>
+<p>During the <em>Secret Wars</em> arc, Parker bonded with an alien symbiote that mimicked his suit. It felt better, responded faster, never ran out of web fluid. He dismissed the discomfort as fatigue.</p>
+<p>He should have listened.</p>
+<p>The symbiote wasn&rsquo;t mimicking the suit. It was learning Parker — his movement patterns, his fears, his reflexes. By the time Reed Richards confirmed it was a living alien parasite attempting a permanent bond, it had already begun to alter Parker&rsquo;s personality.</p>
+<p>The suit wasn&rsquo;t upgrades. It was assimilation.</p>
+<hr>
+<p><em>The symbiote would go on to find a more willing host. But that&rsquo;s another story.</em></p>
+
+    </div>
+
+    
+    <hr class="post-divider">
+    <footer class="post-footer">
+        <div class="post-nav">
+            
+            <a class="prev" href="/blog/venom/">← Venom: A Symbiote&#39;s Anatomy</a>
+            
+            
+            <a class="next" href="/blog/carnage/">Carnage: When the Symbiote Chooses a Killer →</a>
+            
+        </div>
+    </footer>
+    
+</article>
+</main><footer>
+    <p>prefer the terminal? try <code>curl -sL http://localhost:1313/blog/spider-man/</code></p>
+</footer>
+<script>
+    const themes = ["venom","carnage","black-suit","anti-venom","charcoal","amoled","gruvbox","dracula","nord","catppuccin"];
+    const toggle = document.getElementById('theme-toggle');
+    let currentTheme = document.documentElement.getAttribute('data-theme') || 'charcoal';
+
+    if (themes.indexOf(currentTheme) === -1) {
+        currentTheme = themes[0] || 'charcoal';
+        if (currentTheme === 'charcoal') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+        localStorage.setItem('theme', currentTheme);
+    }
+    
+    toggle.textContent = `[${currentTheme}]`;
+
+    toggle.addEventListener('click', () => {
+        currentTheme = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+        
+        if (currentTheme === 'charcoal') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+        
+        localStorage.setItem('theme', currentTheme);
+        toggle.textContent = `[${currentTheme}]`;
+    });
+</script>
+</div>
+
+</body>
+</html>

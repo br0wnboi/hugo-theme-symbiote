@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Symbiote Theme Demo</title>
+<meta name="description" content="A demo of the Symbiote theme.">
+<meta name="author" content="John Doe">
+
+<link rel="stylesheet" href="http://localhost:1313/css/style.min.344e9848dc51afd8f7a90cf25170e28c87cb3b2dc1565e5f23b623ae6aaeb5ac.css" integrity="sha256-NE6YSNxRr9j3qQzyUXDijIfLOy3BVl5fI7Yjrmqutaw=">
+
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/tags/demo/index.xml" title="Symbiote Theme Demo">
+
+<script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme && savedTheme !== 'charcoal') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+</script>
+</head>
+<body>
+
+<div class="container"><header>
+    
+    
+        
+    
+
+    <div class="header-content">
+        <div class="site-prompt">
+            <span class="user">hacker</span><span class="path">@mainframe</span> ~&nbsp;<span class="typed-text" data-text="cd /tags/demo/"></span>
+            <span class="cursor"></span>
+        </div>
+        <nav>
+            <ul>
+                
+        
+        <li><a href="http://localhost:1313/">home</a></li>
+        
+        
+        <li><a href="http://localhost:1313/blog/">blog</a></li>
+        
+            </ul>
+        </nav>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[charcoal]</button>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textElement = document.querySelector('.typed-text');
+        const textToType = textElement.getAttribute('data-text');
+        if (!textToType) return;
+        let index = 0;
+        function type() {
+            if (index < textToType.length) {
+                textElement.textContent += textToType.charAt(index);
+                index++;
+                setTimeout(type, 50 + Math.random() * 50);
+            }
+        }
+        setTimeout(type, 250);
+    });
+</script>
+<main>
+<h1>Demo</h1>
+
+
+
+<ul class="post-list">
+    
+    <li class="post-item">
+        <div class="post-header-list">
+            <span class="post-date">2026-07-02</span>
+            <a class="post-title" href="/blog/first-post/">We are Venom</a>
+        </div>
+        
+        
+        <p class="post-summary">This is a demonstration post for the hugo-theme-symbiote package.
+Try clicking the theme toggle in the footer to cycle through the official symbiote color schemes: venom, carnage, black-suit, and anti-venom.
+</p>
+    </li>
+    
+</ul>
+
+</main><footer>
+    <p>prefer the terminal? try <code>curl -sL http://localhost:1313/tags/demo/</code></p>
+</footer>
+<script>
+    const themes = ["venom","carnage","black-suit","anti-venom","charcoal","amoled","gruvbox","dracula","nord","catppuccin"];
+    const toggle = document.getElementById('theme-toggle');
+    let currentTheme = document.documentElement.getAttribute('data-theme') || 'charcoal';
+
+    if (themes.indexOf(currentTheme) === -1) {
+        currentTheme = themes[0] || 'charcoal';
+        if (currentTheme === 'charcoal') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+        localStorage.setItem('theme', currentTheme);
+    }
+    
+    toggle.textContent = `[${currentTheme}]`;
+
+    toggle.addEventListener('click', () => {
+        currentTheme = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+        
+        if (currentTheme === 'charcoal') {
+            document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+        
+        localStorage.setItem('theme', currentTheme);
+        toggle.textContent = `[${currentTheme}]`;
+    });
+</script>
+</div>
+
+</body>
+</html>
