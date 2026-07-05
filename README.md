@@ -1,5 +1,6 @@
 # Hugo Theme Symbiote
 
+<video src="images/demo.webm" width="100%" autoplay loop muted playsinline></video>
 ## Theme Gallery
 
 ### Amoled
