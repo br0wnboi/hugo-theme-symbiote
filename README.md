@@ -2,12 +2,25 @@
 
 ## Theme Gallery
 
-| Theme | Homepage | Blog List | Blog Post |
-| :--- | :--- | :--- | :--- |
-| **Amoled** | <img src="ss/Index-Amoled.png" width="300" /> | <img src="ss/Blog-amoled.png" width="300" /> | <img src="ss/blog2-amoled.png" width="300" /> |
-| **Venom** | <img src="ss/Index-venom.png" width="300" /> | <img src="ss/Blog-venom.png" width="300" /> | <img src="ss/blog2-venom.png" width="300" /> |
-| **Carnage** | <img src="ss/Index-carnage.png" width="300" /> | <img src="ss/Blog-carnage.png" width="300" /> | <img src="ss/blog2-carnage.png" width="300" /> |
-| **Anti-Venom** | <img src="ss/Index-anti-venom.png" width="300" /> | <img src="ss/Blog-anti-venom.png" width="300" /> | <img src="ss/blog2-anti-venom.png" width="300" /> |
+### Amoled
+![Amoled Homepage](images/screenshots/Index-Amoled.png)
+![Amoled Blog List](images/screenshots/Blog-amoled.png)
+![Amoled Blog Post](images/screenshots/blog2-amoled.png)
+
+### Venom
+![Venom Homepage](images/screenshots/Index-venom.png)
+![Venom Blog List](images/screenshots/Blog-venom.png)
+![Venom Blog Post](images/screenshots/blog2-venom.png)
+
+### Carnage
+![Carnage Homepage](images/screenshots/Index-carnage.png)
+![Carnage Blog List](images/screenshots/Blog-carnage.png)
+![Carnage Blog Post](images/screenshots/blog2-carnage.png)
+
+### Anti-Venom
+![Anti-Venom Homepage](images/screenshots/Index-anti-venom.png)
+![Anti-Venom Blog List](images/screenshots/Blog-anti-venom.png)
+![Anti-Venom Blog Post](images/screenshots/blog2-anti-venom.png)
 
 A dark, minimalistic, terminal-inspired Hugo theme built for security researchers and hackers.
 
