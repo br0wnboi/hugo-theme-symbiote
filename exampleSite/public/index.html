@@ -28,7 +28,7 @@
 
     <div class="header-content">
         <div class="site-prompt">
-            <span class="user">hacker</span><span class="path">@mainframe</span> ~&nbsp;<span class="typed-text" data-text="cd ~"></span>
+            <span class="user">peter.p</span><span class="path">@oscorp</span> ~&nbsp;<span class="typed-text" data-text="cd ~"></span>
             <span class="cursor"></span>
         </div>
         <nav>
@@ -73,7 +73,24 @@
 <p>Welcome to <strong>Symbiote</strong>. This is the example site for the sleek, dark, terminal-inspired Hugo theme.</p>
 <div class="social-links">
 <a href="https://github.com/br0wnboi/hugo-theme-symbiote">github</a>
+<a href="https://x.com">x</a>
+<a href="https://youtube.com">youtube</a>
 </div>
+<h2 id="generating-ascii-art">Generating ASCII Art</h2>
+<p>Want to customize the ASCII banner at the top of this page?</p>
+<ol>
+<li>Visit <a href="https://patorjk.com/software/taag/#p=display&amp;f=Graffiti&amp;t=Type+Something+&amp;x=none&amp;v=4&amp;h=4&amp;w=80&amp;we=false">patorjk.com</a></li>
+<li>Type your site name to generate the art.</li>
+<li>Open <code>content/_index.md</code> in your project.</li>
+<li>Paste the generated ASCII text directly inside the <code>&lt;div class=&quot;ascii-banner&quot;&gt;</code> tag!</li>
+</ol>
+<h2 id="terminal-features">Terminal Features</h2>
+<ul>
+<li><strong>Dynamic Prompt</strong>: Look at the header above! The command (<code>cd ~</code>) was typed out via animation. If you navigate to the blog, it dynamically changes to <code>ls -la /blog/</code> to accurately reflect your file path!</li>
+<li><strong>Curl Support</strong>: Scroll to the very bottom of the page. You can copy that <code>curl</code> command and run it in your own terminal to view the raw text of this page!</li>
+</ul>
+<h2 id="switching-colour-schemes">Switching Colour Schemes</h2>
+<p>To switch colour schemes, click the theme button in the top right corner of the header. The button displays the <strong>current active theme</strong> (e.g., <code>[charcoal]</code>). Simply click it, and the UI will instantly cycle through all available themes (like venom, carnage, amoled, etc) and remember your preference for your next visit.</p>
 
 </main><footer>
     <p>prefer the terminal? try <code>curl -sL http://localhost:1313/</code></p>

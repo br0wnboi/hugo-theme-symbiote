@@ -26,5 +26,9 @@ Want to customize the ASCII banner at the top of this page?
 3. Open `content/_index.md` in your project.
 4. Paste the generated ASCII text directly inside the `<div class="ascii-banner">` tag!
 
+## Terminal Features
+- **Dynamic Prompt**: Look at the header above! The command (`cd ~`) was typed out via animation. If you navigate to the blog, it dynamically changes to `ls -la /blog/` to accurately reflect your file path!
+- **Curl Support**: Scroll to the very bottom of the page. You can copy that `curl` command and run it in your own terminal to view the raw text of this page!
+
 ## Switching Colour Schemes
-To switch colour schemes, simply click the `[charcoal]` button in the top right corner of the header! The UI will instantly cycle through all available themes (like venom, carnage, amoled, etc) and remember your preference for your next visit.
+To switch colour schemes, click the theme button in the top right corner of the header. The button displays the **current active theme** (e.g., `[charcoal]`). Simply click it, and the UI will instantly cycle through all available themes (like venom, carnage, amoled, etc) and remember your preference for your next visit.

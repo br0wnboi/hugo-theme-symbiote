@@ -6,9 +6,27 @@ A dark, minimalistic, terminal-inspired Hugo theme built for security researcher
 
 ## Features
 - Fully responsive terminal UI
+- Dynamic blinking prompt that reacts to page navigation
+- Built-in `curl` hint for terminal access
 - Hugo Pipes integration for heavily optimized CSS
 - Robust internationalization (i18n) support
-- Dynamic, extensible color schemes
+- Dynamic, extensible colour schemes
+
+## Terminal UI Features
+
+**Dynamic Blinking Prompt**
+The header features a typing animation that simulates a terminal prompt. The command dynamically changes based on the page you are viewing (e.g., `cd ~` for the homepage, `ls -la /blog/` for lists, and `cat /blog/post.md` for articles).
+
+You can customize the prompt identity in your `hugo.toml`:
+```toml
+[params]
+  promptUser = "peter.p"
+  promptHost = "oscorp"
+  showCursor = true
+```
+
+**Curl Support**
+The footer of every page includes a convenient hint (`curl -sL <url>`), encouraging visitors to fetch the raw plaintext content of the page directly from their terminal.
 
 ## Installation
 
@@ -49,7 +67,9 @@ This theme allows you to create custom colour schemes that automatically hook in
 
 ## Restricting or Removing Colour Schemes
 
-If you only want specific colour schemes to show up on your website (e.g., you only want to cycle between `amoled` and `venom`), you do not need to delete any CSS. 
+To switch colour schemes, click the theme button in the top right corner of the header. The button displays the **current active theme** (e.g., `[charcoal]`) and updates dynamically as you cycle through the options.
+
+If you only want specific colour schemes to show up on your website (e.g., you only want to cycle between `amoled` and `venom`), you do not need to delete any CSS.
 
 Simply restrict the `themes` array in your `hugo.toml`:
 ```toml
