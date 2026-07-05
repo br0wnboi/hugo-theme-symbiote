@@ -1,0 +1,8 @@
+{{ .Title }}
+{{ strings.Repeat (len .Title) "=" }}
+
+{{ .Content | plainify | htmlUnescape | strings.TrimSpace }}
+
+---
+{{ range .Site.Menus.main }}{{ .Name }}: {{ .URL | absURL }}
+{{ end }}

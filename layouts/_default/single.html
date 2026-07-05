@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="post-content">
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ if eq .Type "blog" }}
+        <div class="post-meta">
+            <div class="post-meta-line">
+                {{ if .Date }}<span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+                <span class="reading-time">· {{ .ReadingTime }} {{ i18n "min_read" }}</span>
+            </div>
+            {{ if .GetTerms "tags" }}
+            <div class="post-tags">
+                {{ range (.GetTerms "tags") }}<a href="{{ .RelPermalink }}" class="post-tag">#{{ .LinkTitle }}</a>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    {{ if and (eq .Type "blog") (and .TableOfContents (gt (len .TableOfContents) 40)) }}
+    <div class="toc">
+        <details open>
+            <summary>{{ i18n "table_of_contents" }}</summary>
+            {{ .TableOfContents }}
+        </details>
+    </div>
+    {{ end }}
+
+    <div class="post-body">
+        {{ .Content }}
+    </div>
+
+    {{ if eq .Type "blog" }}
+    <hr class="post-divider">
+    <footer class="post-footer">
+        <div class="post-nav">
+            {{ with .PrevInSection }}
+            <a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>
+            {{ end }}
+            {{ with .NextInSection }}
+            <a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+            {{ end }}
+        </div>
+    </footer>
+    {{ end }}
+</article>
+{{ end }}

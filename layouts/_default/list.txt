@@ -1,0 +1,9 @@
+{{ .Title }}
+{{ strings.Repeat (len .Title) "=" }}
+
+{{ .Content | plainify | htmlUnescape | strings.TrimSpace }}
+
+{{ range .Pages.ByDate.Reverse }}
+[{{ .Date.Format "2006-01-02" }}] {{ .Title }}
+  {{ .Permalink }}
+{{ end }}

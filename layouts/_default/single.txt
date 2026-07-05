@@ -1,0 +1,4 @@
+{{ .Title }}
+{{ strings.Repeat (len .Title) "=" }}
+
+{{ .Content | plainify | htmlUnescape | strings.TrimSpace }}

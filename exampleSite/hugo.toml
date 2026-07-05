@@ -1,0 +1,30 @@
+baseURL = "https://example.com"
+title = "Symbiote Theme Demo"
+theme = "hugo-theme-symbiote"
+themesDir = "../../"
+locale = "en-US"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "A demo of the Symbiote theme."
+  author = "John Doe"
+  
+  # Theme Configuration
+  promptUser = "hacker"
+  promptHost = "mainframe"
+  showCursor = true
+  themes = ["venom", "carnage", "black-suit", "anti-venom", "charcoal", "amoled", "gruvbox", "dracula", "nord", "catppuccin"]
+
+[[menus.main]]
+  name = "home"
+  url = "/"
+  weight = 1
+
+[[menus.main]]
+  name = "blog"
+  url = "/blog/"
+  weight = 2

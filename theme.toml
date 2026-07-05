@@ -1,0 +1,11 @@
+name = "Symbiote"
+license = "MIT"
+licenselink = "https://github.com/br0wnboi/hugo-theme-symbiote/blob/master/LICENSE"
+description = "A dark, highly-customizable hacker/terminal theme for Hugo."
+homepage = "https://github.com/br0wnboi/hugo-theme-symbiote/"
+tags = ["blog", "dark", "terminal", "hacker", "minimal", "responsive", "customizable"]
+features = ["blog", "syntax highlighting", "custom color schemes", "i18n", "taxonomy", "dynamic TOC"]
+min_version = "0.123.0"
+
+[author]
+  name = "br0wnboi"

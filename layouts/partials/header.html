@@ -1,0 +1,48 @@
+<header>
+    {{ $typeText := "cd ~" }}
+    {{ if .IsHome }}
+        {{ $typeText = "cd ~" }}
+    {{ else if eq .RelPermalink "/about/" }}
+        {{ $typeText = "whoami" }}
+    {{ else if eq .Section "blog" }}
+        {{ if .IsPage }}
+            {{ $typeText = printf "cat /blog/%s.md" (strings.TrimSuffix "/" (path.Base .RelPermalink)) }}
+        {{ else }}
+            {{ $typeText = "ls -la /blog/" }}
+        {{ end }}
+    {{ else }}
+        {{ $typeText = printf "cd %s" .RelPermalink }}
+    {{ end }}
+
+    <div class="header-content">
+        <div class="site-prompt">
+            <span class="user">{{ site.Params.promptUser | default "user" }}</span><span class="path">@{{ site.Params.promptHost | default "host" }}</span> ~&nbsp;<span class="typed-text" data-text="{{ $typeText }}"></span>
+            {{ if site.Params.showCursor | default true }}<span class="cursor"></span>{{ end }}
+        </div>
+        <nav>
+            <ul>
+                {{ range .Site.Menus.main }}
+        {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+        <li><a href="{{ .URL | absURL }}"{{ if $active }} aria-current="page" class="active"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+            </ul>
+        </nav>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">[charcoal]</button>
+</header>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textElement = document.querySelector('.typed-text');
+        const textToType = textElement.getAttribute('data-text');
+        if (!textToType) return;
+        let index = 0;
+        function type() {
+            if (index < textToType.length) {
+                textElement.textContent += textToType.charAt(index);
+                index++;
+                setTimeout(type, 50 + Math.random() * 50);
+            }
+        }
+        setTimeout(type, 250);
+    });
+</script>
