@@ -1,5 +1,7 @@
 # Hugo Theme Symbiote
 
+![Symbiote Theme Screenshot](images/screenshot.png)
+
 A dark, minimalistic, terminal-inspired Hugo theme built for security researchers and hackers.
 
 ## Features
@@ -20,9 +22,9 @@ Then, add this to your `hugo.toml`:
 theme = "hugo-theme-symbiote"
 ```
 
-## Creating Custom Color Schemes
+## Creating Custom Colour Schemes
 
-This theme allows you to create custom color schemes that automatically hook into the Javascript theme-switcher.
+This theme allows you to create custom colour schemes that automatically hook into the Javascript theme-switcher.
 
 1. Create a `static/css/custom.css` (or `assets/css/custom.css`) in your project.
 2. Define the strict 9-variable CSS API under a `:root[data-theme="your-theme-name"]` selector:
@@ -45,13 +47,13 @@ This theme allows you to create custom color schemes that automatically hook int
   themes = ["your-theme-name", "venom", "charcoal"]
 ```
 
-## Restricting or Removing Themes
+## Restricting or Removing Colour Schemes
 
-If you only want specific themes to show up on your website (e.g., you only want to cycle between `amoled` and `venom`), you do not need to delete any CSS. 
+If you only want specific colour schemes to show up on your website (e.g., you only want to cycle between `amoled` and `venom`), you do not need to delete any CSS. 
 
 Simply restrict the `themes` array in your `hugo.toml`:
 ```toml
 [params]
   themes = ["amoled", "venom"]
 ```
-The Javascript toggle will instantly respect this list and ignore all other built-in themes.
+The Javascript toggle will instantly respect this list and ignore all other built-in colour schemes.
