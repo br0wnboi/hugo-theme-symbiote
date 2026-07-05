@@ -279,7 +279,7 @@ main {
 
 /* === ASCII Art Banner === */
 .ascii-banner {
-    font-family: var(--font-mono);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: clamp(0.35rem, 1.4vw, 0.65rem);
     line-height: 1;
     -webkit-text-size-adjust: none;
@@ -694,7 +694,11 @@ footer a {
     html { font-size: 15px; }
     header { margin-bottom: 2rem; }
     .header-content nav ul { gap: 0.2rem 1rem; }
-    .ascii-banner { font-size: 1.6vw; }
+    .ascii-banner { 
+        font-size: 8px; 
+        overflow-x: auto;
+        white-space: pre;
+    }
     .entry-header { flex-direction: column; gap: 0.1rem; }
     h1 { font-size: 1.2rem; }
     h2 { font-size: 1rem; }
