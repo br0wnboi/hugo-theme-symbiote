@@ -1,6 +1,13 @@
 # Hugo Theme Symbiote
 
-![Symbiote Theme Screenshot](images/screenshot.png)
+## Theme Gallery
+
+| Theme | Homepage | Blog List | Blog Post |
+| :--- | :--- | :--- | :--- |
+| **Amoled** | <img src="ss/Index-Amoled.png" width="300" /> | <img src="ss/Blog-amoled.png" width="300" /> | <img src="ss/blog2-amoled.png" width="300" /> |
+| **Venom** | <img src="ss/Index-venom.png" width="300" /> | <img src="ss/Blog-venom.png" width="300" /> | <img src="ss/blog2-venom.png" width="300" /> |
+| **Carnage** | <img src="ss/Index-carnage.png" width="300" /> | <img src="ss/Blog-carnage.png" width="300" /> | <img src="ss/blog2-carnage.png" width="300" /> |
+| **Anti-Venom** | <img src="ss/Index-anti-venom.png" width="300" /> | <img src="ss/Blog-anti-venom.png" width="300" /> | <img src="ss/blog2-anti-venom.png" width="300" /> |
 
 A dark, minimalistic, terminal-inspired Hugo theme built for security researchers and hackers.
 
