@@ -279,8 +279,8 @@ main {
 
 /* === ASCII Art Banner === */
 .ascii-banner {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: clamp(0.35rem, 1.4vw, 0.65rem);
+    font-family: var(--font-mono);
+    font-size: clamp(0.5rem, 2vw, 0.85rem);
     line-height: 1;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
@@ -695,9 +695,9 @@ footer a {
     header { margin-bottom: 2rem; }
     .header-content nav ul { gap: 0.2rem 1rem; }
     .ascii-banner { 
-        font-size: 8px; 
-        overflow-x: auto;
+        font-size: 0.65rem; 
         white-space: pre;
+        overflow-x: auto;
     }
     .entry-header { flex-direction: column; gap: 0.1rem; }
     h1 { font-size: 1.2rem; }

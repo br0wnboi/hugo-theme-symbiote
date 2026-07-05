@@ -3,7 +3,16 @@
 
 {{ .Content | plainify | htmlUnescape | strings.TrimSpace }}
 
+{{ if eq .Section "blog" }}
+> To read a post, run: curl -sL {{ .Site.BaseURL }}blog/<post-name>/
+
 {{ range .Pages.ByDate.Reverse }}
 [{{ .Date.Format "2006-01-02" }}] {{ .Title }}
-  {{ .Permalink }}
+  curl -sL {{ .Permalink }}
+{{ end }}
+{{ else }}
+{{ range .Pages.ByDate.Reverse }}
+* {{ .Title }} ({{ .Permalink }})
+  {{ .Summary | plainify | htmlUnescape | strings.TrimSpace }}
+{{ end }}
 {{ end }}

@@ -1,7 +1,12 @@
 {{ .Title }}
 {{ strings.Repeat (len .Title) "=" }}
 
-{{ .Content | plainify | htmlUnescape | strings.TrimSpace }}
+{{ $raw := .RawContent }}
+{{ $raw = replaceRE "(?s)<div class=\"ascii-banner\">(.*?)</div>" "$1" $raw }}
+{{ $raw = replaceRE "(?s)<p class=\"tagline\">(.*?)</p>" "$1" $raw }}
+{{ $raw = replaceRE "(?s)<section class=\"bio\">(.*?)</section>" "$1" $raw }}
+{{ $raw = replaceRE "(?s)<div class=\"social-links\">(.*?)</div>" "$1" $raw }}
+{{ $raw | htmlUnescape | strings.TrimSpace }}
 
 ---
 {{ range .Site.Menus.main }}{{ .Name }}: {{ .URL | absURL }}
