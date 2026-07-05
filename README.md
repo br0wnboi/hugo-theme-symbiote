@@ -1,6 +1,11 @@
 # Hugo Theme Symbiote
 
-<video src="images/demo.webm" width="100%" autoplay loop muted playsinline></video>
+A dark, minimalistic, terminal-inspired Hugo theme built for security researchers and hackers.
+
+## Demo
+
+![Symbiote Theme Demo](images/demo.gif)
+
 ## Theme Gallery
 
 ### Amoled
@@ -22,8 +27,6 @@
 ![Anti-Venom Homepage](images/screenshots/Index-anti-venom.png)
 ![Anti-Venom Blog List](images/screenshots/Blog-anti-venom.png)
 ![Anti-Venom Blog Post](images/screenshots/blog2-anti-venom.png)
-
-A dark, minimalistic, terminal-inspired Hugo theme built for security researchers and hackers.
 
 ## Features
 - Fully responsive terminal UI
