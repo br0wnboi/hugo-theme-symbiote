@@ -1,4 +1,6 @@
 {{ .Title }}
 {{ strings.Repeat (len .Title) "=" }}
 
-{{ .Content | plainify | htmlUnescape | strings.TrimSpace }}
+{{ $raw := .RawContent }}
+{{ $raw = replaceRE "(?i)<a href=\"([^\"]+)\"[^>]*>(.*?)</a>" "[$2]($1)" $raw }}
+{{ $raw | htmlUnescape | strings.TrimSpace }}

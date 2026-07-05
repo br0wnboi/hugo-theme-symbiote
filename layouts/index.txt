@@ -6,6 +6,7 @@
 {{ $raw = replaceRE "(?s)<p class=\"tagline\">(.*?)</p>" "$1" $raw }}
 {{ $raw = replaceRE "(?s)<section class=\"bio\">(.*?)</section>" "$1" $raw }}
 {{ $raw = replaceRE "(?s)<div class=\"social-links\">(.*?)</div>" "$1" $raw }}
+{{ $raw = replaceRE "(?i)<a href=\"([^\"]+)\"[^>]*>(.*?)</a>" "[$2]($1)" $raw }}
 {{ $raw | htmlUnescape | strings.TrimSpace }}
 
 ---
