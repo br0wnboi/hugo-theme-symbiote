@@ -157,13 +157,20 @@ body {
 }
 
 /* === Header & Nav === */
-header {
+.container > header {
     border-bottom: 1px solid var(--border);
     padding: 1.5rem 0;
     margin-bottom: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+article.post-content > header {
+    display: block;
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .post-list li {
